@@ -1,0 +1,425 @@
+{
+    "info": {
+        "_postman_id": "e36cbef4-408d-447f-b443-27c7a721d525",
+        "name": "Blog",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "User",
+            "item": [
+                {
+                    "name": "Register",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/signup/register",
+                            "path": [
+                                "api",
+                                "signup",
+                                "register"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"firstName\":\"Sathish\",\n  \"lastName\":\"kumar \",\n  \"userName\":\"sk17812\",\n  \"password\":\"Sk1781@1\",\n  \"confirmPassword\":\"Sk1781@1\",\n  \"dob\":\"2000-10-10\",\n  \"email\":\"sathizzkumarr1@gmail.com\",\n  \"bio\":\"Node Js Developer\",\n  \"gender\":\"male\",\n  \"avatar\":{\n    \"type\":\"png\",\n    \"file\":\"base64_file\",\n    \"size\":\"60\"\n  }\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Update",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/user/update",
+                            "path": [
+                                "api",
+                                "user",
+                                "update"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "header": [
+                            {
+                                "key": "auth-token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjI3M2VkZDEyMTQ3MTBlMzE0M2YwNzAiLCJlbWFpbCI6InJqeW9nZXNod2FyYW5AZ21haWwuY29tIiwidXNlck5hbWUiOiJyanlvZ2kiLCJpYXQiOjE3MTM4NDgwNzYsImV4cCI6MTcxMzkzNDQ3Nn0.Q3AdtihEhulnpve_squWpZcMZFopah2r3um1FAM0EFA"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"firstName\":\"  Yogesh   \",\n  \"lastName\":\"waran\",\n  \"userName\":\"vv3\",\n  \"password\":\"123A@wwb\",\n  \"confirmPassword\":\"123A@wwb\",\n  \"dob\":\"2000-08-08\",\n  \"email\":\"sathiv@gmail.com\",\n  \"bio\":\"'Im a node js devloper too\",\n  \"gender\":\"male\",\n  \"avatar\":{\n    \"type\":\"png\",\n    \"file\":\"b\",\n    \"size\":\"60\"\n  }\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "View",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/user/view",
+                            "path": [
+                                "api",
+                                "user",
+                                "view"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "header": [
+                            {
+                                "key": "auth-token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjI3M2VkZDEyMTQ3MTBlMzE0M2YwNzAiLCJlbWFpbCI6InJqeW9nZXNod2FyYW5AZ21haWwuY29tIiwidXNlck5hbWUiOiJyanlvZ2kiLCJpYXQiOjE3MTM4NDgwNzYsImV4cCI6MTcxMzkzNDQ3Nn0.Q3AdtihEhulnpve_squWpZcMZFopah2r3um1FAM0EFA"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\":\"sathiv@gmail.com\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/user/delete",
+                            "path": [
+                                "api",
+                                "user",
+                                "delete"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "header": [
+                            {
+                                "key": "auth-token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjI2NDNiMTZlOTk0ODEwZWVkNzlkZjYiLCJlbWFpbCI6InNhdGhpdnNAZ21haWwuY29tIiwidXNlck5hbWUiOiJ2dmQiLCJpYXQiOjE3MTM3ODQyODgsImV4cCI6MTcxMzg3MDY4OH0.4Is0t7Qp9EF0m7bV6clM8-Jf-6CUFrGRfud-VUgvjlg"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"email\":\"sathiv@gmail.com\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Login",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/login/login",
+                            "path": [
+                                "api",
+                                "login",
+                                "login"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n    \"userName\": \"rjyogi\",\n    \"password\": \"Rjyogi88@\"\n  }"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Post",
+            "item": [
+                {
+                    "name": "Add",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/post/add",
+                            "path": [
+                                "api",
+                                "post",
+                                "add"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "header": [
+                            {
+                                "key": "auth-token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjI2NDNiMTZlOTk0ODEwZWVkNzlkZjYiLCJlbWFpbCI6InNhdGhpdnNAZ21haWwuY29tIiwidXNlck5hbWUiOiJ2dmQiLCJpYXQiOjE3MTM3ODQyODgsImV4cCI6MTcxMzg3MDY4OH0.4Is0t7Qp9EF0m7bV6clM8-Jf-6CUFrGRfud-VUgvjlg"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"headline\":\"New blog post 23/4 16.59pm\",\n  \"paragraph\":\"Trial post description 3\",\n  \"image\":{\n    \"type\":\"png\",\n    \"size\":\"5000\",\n    \"file\":\"mmnnhhjj\"\n  }\n  \n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Update",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/post/update",
+                            "path": [
+                                "api",
+                                "post",
+                                "update"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n    \"postId\": \"662565d11139b6dbd6a38026\",\n    \"headline\":\"Updated post 2.\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "View",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/post/view",
+                            "path": [
+                                "api",
+                                "post",
+                                "view"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "header": [
+                            {
+                                "key": "auth-token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjI2NDNiMTZlOTk0ODEwZWVkNzlkZjYiLCJlbWFpbCI6InNhdGhpdnNAZ21haWwuY29tIiwidXNlck5hbWUiOiJ2dmQiLCJpYXQiOjE3MTM3ODQyODgsImV4cCI6MTcxMzg3MDY4OH0.4Is0t7Qp9EF0m7bV6clM8-Jf-6CUFrGRfud-VUgvjlg"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"page\":2,\n  \"limit\":\"10\",\n  \"sort\":-1\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/post/delete",
+                            "path": [
+                                "api",
+                                "post",
+                                "delete"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n    \"postId\": \"662565d11139b6dbd6a38026\"\n}"
+                        }
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Comment",
+            "item": [
+                {
+                    "name": "Add",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/comment/add",
+                            "path": [
+                                "api",
+                                "comment",
+                                "add"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n  \"postId\":\"662565d11139b6dbd6a38026\",\n  \"comment\":\"Good\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Edit",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/comment/edit",
+                            "path": [
+                                "api",
+                                "comment",
+                                "edit"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n    \"commentId\": \"6625869620e3f89b17fb6dcf\",\n    \"comment\":\"Updated comment.\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "Delete",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/comment/delete",
+                            "path": [
+                                "api",
+                                "comment",
+                                "delete"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n    \"commentId\": \"662565d11139b6dbd6a38026\"\n}"
+                        }
+                    }
+                },
+                {
+                    "name": "View",
+                    "request": {
+                        "method": "POST",
+                        "url": {
+                            "raw": "http://localhost:5000/api/comment/view",
+                            "path": [
+                                "api",
+                                "comment",
+                                "view"
+                            ],
+                            "protocol": "http",
+                            "host": [
+                                "localhost"
+                            ],
+                            "port": "5000"
+                        },
+                        "header": [
+                            {
+                                "key": "auth-token",
+                                "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjI0ZjA5Mjc3ZGM5MWJmMzg4M2M4NTgiLCJlbWFpbCI6InNhdGhpdkBnbWFpbC5jb20iLCJ1c2VyTmFtZSI6InZ2MyIsImlhdCI6MTcxMzY5OTI1MywiZXhwIjoxNzEzNjk5NTUzfQ.8HXYZFHVL4jhBaaYzlffPgA-fI296H73mMeIFGWsTpY"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            },
+                            "raw": "{\n    \"postId\": \"662565d11139b6dbd6a38026\"\n}"
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
