@@ -1,7 +1,8 @@
-git clone https://github.com/sathizz1781/Blog/new/master
-cd your-repository
-npm install
-npm start
+>>git clone https://github.com/sathizz1781/Blog/new/master
+>>cd your-repository
+>>npm install
+>>npm start
+>>Import the json file in the name of thunder_collection_Blog_postman in postman for API endpoint checking.
 
 Process flow
 //USER MODULE
